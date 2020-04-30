@@ -1,0 +1,44 @@
+.centrar{
+    text-align: center;
+    margin: 100px auto;
+    width: 60%;
+}
+table{
+    background-color: white;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    padding:15px;
+}
+thead{
+    background-color:#3498db ;
+    border-bottom: solid 5px #3742fa;
+    color: silver;
+}
+tr:nth-child(even){
+    background-color: #7ebae2;
+}
+tr:hover td{
+    background-color:#3498db;
+    color: white;
+}
+/*tabla de cotegorias*/
+.centrar_categoria{
+    position: absolute;
+    text-align: center;
+    margin: 200px auto;
+    width: 20%;
+    top:-58px;
+    left:1000px;
+}
+/*tablas proveedor*/
+.centrar_categoria{
+    position: absolute;
+    text-align: center;
+    margin: 200px auto;
+    width: 30%;
+    top:-58px;
+    left:1000px;
+}
