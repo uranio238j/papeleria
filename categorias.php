@@ -26,7 +26,7 @@
                   <li>  <a href=panel_de_control.php>panel de control</a></li>
                   <li>  <a href="usuarios_2.php">Usuarios</a></li>
                   <li>  <a href="categorias.php">Categorias</a></li>
-                  <li>  <a href="#">Productos</a></li>
+                  <li>  <a href="productos.php">Productos</a></li>
                   <li>  <a href="proveedor.php">Proveedores</a></li>
                   <li>  <a href="#">Ventas</a></li>
                   <li>  <a href="serrar_secion.php">Cerrar secion</a></li>

@@ -178,3 +178,46 @@ ul{
     margin-left: 10px;
     margin-top: 10px;
   }
+  /*producto*/
+  .agregar_pr h2{
+    text-align: center;
+    margin: 0;
+    background-color:#3498db ;
+    border-bottom: solid 5px #3742fa;
+    color: rgb(223, 223, 223);
+  }
+  .agregar_pr form{
+    margin-bottom: 0;
+    text-align: left;
+    height: 100px;
+  }
+  .agregar_pr{
+   position: absolute;
+   background-color: white;
+   display: block;
+    margin: 10px auto;
+    width: 30%;
+    height: 460px;
+    left: 300px;
+  }
+  .agregar_pr input[type = "text"]{
+    width: 100%;
+    padding: 10px;
+    border: solid 1px silver;
+  }
+  .agregar_pr input[type = "submit"]{
+    border: none;
+    background-color:#3498db ;
+    width: 100px;
+    height: 30px;
+    color:rgb(243, 243, 243);
+    text-align:left;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .agregar_pr input[type = "search"]{
+    width: 100%;
+    padding: 10px;
+    border: solid 1px silver;
+  }
