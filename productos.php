@@ -39,37 +39,70 @@
             // Realizar una consulta MySQL
             $resultado = $conexion->query("SELECT * FROM proveedor");
             $resultado2 = $conexion->query("SELECT * FROM categorias");
+            $resultado3 = $conexion->query("SELECT * FROM producto");
         ?>
         
     <div class="agregar_pr">
-                <form class="box" action="index2.php" method="POST">
+                <form class="box" action="registrar_producto.php" method="POST">
                     <h2>REGISTRAR PRODUCTO</h2>
                     <input type="text" name="codigo_de_barras" placeholder="Codigo de barras">
-                    <input type="text" name="nobre_producto" placeholder="Nombre del producto">
+                    <input type="text" name="nombre_producto" placeholder="Nombre del producto">
                     <input type="text" name="Descripcion" placeholder="Descripcion del producto">
                     <input type="text" name="Precio" placeholder="Precio">
-                    <input type="text" name="Precio_sugerido" placeholder="Precio sugerido">
-                    <input type="text" name="fecha" placeholder="Fecha de compra dia/mes/año">
+                    <input type="text" name="Precio_sujerido" placeholder="Precio sugerido">
+                    <input type="text" name="fecha" placeholder="Fecha de compra año-mes-dia">
                     <input type="text" name="existencia" placeholder="Existencia">
                     <input type="text" name="marca" placeholder="Marca del producto">
-                    <input type="text" list="lista" name="proveedor" placeholder="Proveedor" >
+                    <input type="text" list="lista" name="proveedor" placeholder="Proveedor" autocomplete="off">
                     <datalist id="lista">
                     <?php
-                        while($filas = $resultado->fetch_object()){
-                            echo "<option>$filas->PROVEEDOR</option>";
+                        while($filas1 = $resultado->fetch_object()){
+                            echo "<option>$filas1->PROVEEDOR</option>";
                         }
                     ?>
                     </datalist>
-                    <input type="text" list="lista2" name="proveedor" placeholder="Categoria" >
+                    <input type="text" list="lista2" name="categoria" placeholder="Categoria" autocomplete="off" >
                     <datalist id="lista2">
                     <?php
-                        while($fila = $resultado2->fetch_object()){
-                            echo "<option>$fila->categoria</option>";
+                        while($fila2 = $resultado2->fetch_object()){
+                            echo "<option>$fila2->categoria</option>";
                         }
                     ?>
                     </datalist>
                     <input type="submit" name="" value="REGISTRAR">
                  </form>   
             </div>
+            <div class="centrar_producto">
+        <table>
+		  <thead>
+		        <tr>
+			        <th>Codigo de barras</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Precio de venta</th>
+                    <th>Fecha de compra</th>
+                    <th>Cantidad</th>
+                    <th>Marca</th>
+                    <th>proveedor</th>
+                    <th>Categoria</th>
+		        </tr>
+            </thead>
+            <?php while($filas3 = $resultado3->fetch_object()){
+            echo "<tr>";
+            echo "<td>$filas3->CODIGO_DE_BARRAS</td>";
+            echo "<td> $filas3->NOMBRE</td>";
+            echo "<td> $filas3->DESCRIPCION</td>";
+            echo "<td> $filas3->PRECIO_DE_COMPRA</td>";
+            echo "<td> $filas3->PRECIO_SUGERIDO</td>";
+            echo "<td> $filas3->FECHA_DE_COMPRA</td>";
+            echo "<td> $filas3->CANTIDAD</td>";
+            echo "<td> $filas3->MARCA</td>";
+            echo "<td> $filas3->PROVEEDOR</td>";
+            echo "<td> $filas3->categoria</td>";
+            echo "</tr>";	
+            }?>
+        </table>
+        </div>
 </body>
 </html>

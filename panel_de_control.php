@@ -18,12 +18,16 @@
     $base->exec("SET CHARACTER SET utf8");
     $consulta="SELECT * FROM usuarios_1";
     $consulta_2="SELECT * FROM categorias";
+    $consulta_3="SELECT * FROM producto";
     $resul=$base->prepare($consulta);
     $resul_2=$base->prepare($consulta_2);
+    $resul_3=$base->prepare($consulta_3);
     $resul->execute();
     $resul_2->execute();
+    $resul_3->execute();
     $n_registros=$resul->rowCount();
     $n_registros_2=$resul_2->rowCount();
+    $n_registros_3=$resul_3->rowCount();
 }
 catch(Exception $e){
     die ("error".$e->getMessage());
@@ -65,11 +69,11 @@ catch(Exception $e){
                         <span><?php echo $n_registros_2?></span>
                     </p>
                 </a>
-                <a href="#">
+                <a href="productos.php">
                     <li class="icon icon-cart"></li>
                     <p>
                         <strong>productos</strong>
-                        <span>n_productos</span>
+                        <span><?php echo $n_registros_3?></span>
                     </p>
                 </a>
                 <a href="#">
