@@ -1,5 +1,4 @@
 .centrar{
-    text-align: center;
     margin: 100px auto;
     width: 60%;
 }
@@ -49,5 +48,5 @@ tr:hover td{
     margin: 200px auto;
     width: 30%;
     top:420px;
-    left:330px;
+    left:300px;
 }

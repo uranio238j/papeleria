@@ -61,7 +61,6 @@ catch(Exception $e){
                         <span><?php echo $n_registros?></span>
                     </p>
                 </a>
-                
                 <a href="categorias.php">
                     <li class="icon icon-list2"></li>
                     <p>
