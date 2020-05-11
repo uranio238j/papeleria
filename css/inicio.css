@@ -69,7 +69,6 @@ ul{
   
   .barra_b:focus+.button{
     position: relative;
-    top: -55px;
     left: 62%;
   }
   .barra_b:focus{
