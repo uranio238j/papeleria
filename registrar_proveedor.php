@@ -5,10 +5,8 @@ $rfc=htmlentities(addslashes($_POST['Rfc']));
 $correo=htmlentities(addslashes($_POST['Correo']));
 $proveedor=htmlentities(addslashes($_POST['Proveedor']));
 $compania=htmlentities(addslashes($_POST['Compania']));
-try{
-    $base=new PDO("mysql:host=localhost; dbname=papeleria" , "root" , "");
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $base->exec("SET CHARACTER SET utf8");
+include ("conexion.php");
+$base=conectar();
     if(($nombre != null) && ($domicilio != NULL) && ($rfc != NULL) && ($correo != NULL) && ($proveedor != NULL) && ($compania != NULL)){
         if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
             echo"formato de correo no es invalido";
@@ -26,8 +24,4 @@ try{
     window.location.href="proveedor.php";
     </script>';
     }
-}
-catch(Exception $e){
-    die ("error".$e->getMessage());
-}
 ?>

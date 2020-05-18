@@ -9,10 +9,8 @@ $existencia=htmlentities(addslashes($_POST['existencia']));
 $marca=htmlentities(addslashes($_POST['marca']));
 $proveedor=htmlentities(addslashes($_POST['proveedor']));
 $categoria=htmlentities(addslashes($_POST['categoria']));
-try{
-    $base=new PDO("mysql:host=localhost; dbname=papeleria" , "root" , "");
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $base->exec("SET CHARACTER SET utf8");
+include ("conexion.php");
+$base=conectar();
     if(($codigo_de_barras != null) && ($nombre_producto != NULL) && ($descripcion != NULL) && ($precio != NULL) && ($precio_sujerido != NULL) && ($fecha != NULL) && ($existencia!= NULL) && ($marca!=NULL) && ($proveedor!=NULL) && ($categoria!=NULL)){    
     $sql="INSERT INTO producto(CODIGO_DE_BARRAS , NOMBRE , DESCRIPCION , PRECIO_DE_COMPRA , PRECIO_SUGERIDO , FECHA_DE_COMPRA , CANTIDAD , MARCA , PROVEEDOR , categoria ) VALUES(:codigo , :nombre , :descripcion , :precio , :precio_sujerido , :fecha , :existencia , :marca , :proveedor , :categoria)";
     $resul=$base->prepare($sql);
@@ -26,8 +24,4 @@ try{
     window.location.href="productos.php";
     </script>';
     }
-}
-catch(Exception $e){
-    die ("error".$e->getMessage());
-}
 ?>

@@ -13,10 +13,8 @@
   if(!isset($_SESSION["secion"])){
       header("Location:index.php");
   }
-  try{
-    $base=new PDO("mysql:host=localhost; dbname=papeleria" , "root" , "");
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $base->exec("SET CHARACTER SET utf8");
+  include ("conexion.php");
+  $base=conectar();
     $consulta="SELECT * FROM usuarios_1";
     $consulta_2="SELECT * FROM categorias";
     $consulta_3="SELECT * FROM producto";
@@ -29,10 +27,6 @@
     $n_registros=$resul->rowCount();
     $n_registros_2=$resul_2->rowCount();
     $n_registros_3=$resul_3->rowCount();
-}
-catch(Exception $e){
-    die ("error".$e->getMessage());
-}
 ?>
     <nav>
             <form class="box" action="#" method="POST">

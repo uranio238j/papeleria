@@ -1,9 +1,7 @@
 <?php
 $categoria=htmlentities(addslashes($_POST['Categoria']));
-try{
-    $base=new PDO("mysql:host=localhost; dbname=papeleria" , "root" , "");
-    $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $base->exec("SET CHARACTER SET utf8");
+include ("conexion.php");
+$base=conectar();
     if($categoria !=null){
    $sql="INSERT INTO categorias(categoria) VALUES(:CATEGORIA)";
     $resul=$base->prepare($sql);
@@ -17,8 +15,4 @@ try{
     window.location.href="categorias.php";
     </script>';
     }
-}
-catch(Exception $e){
-    die ("error".$e->getMessage());
-}
 ?>

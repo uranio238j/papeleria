@@ -38,8 +38,8 @@
 		  <thead>
 		        <tr>
 			        <th>ID</th>
-			        <th>NOMBRE y apellido</th>
-			        <th>nombre de usuario</th>
+			        <th>Nombre y apellido</th>
+			        <th>Nombre de usuario</th>
 		        </tr>
             </thead>
             <?php while($filas = $resultado->fetch_object()){
