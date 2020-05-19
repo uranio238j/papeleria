@@ -43,7 +43,7 @@
             <input type="text" name="Proveedor" placeholder="Proveedor">
             <input type="text" name="Compania" placeholder="Compañia">
             <input type="submit" value="REGISTRAR">
-        </form>
+    </form>
     </div>
     <?php
             // Conectando, seleccionando la base de datos
@@ -63,12 +63,12 @@
 		        </tr>
             </thead>
             <?php while($filas = $resultado->fetch_object()){
-            echo "<tr>";
-	        echo "<td>$filas->ID</td>";
-            echo "<td> $filas->NOMBRE</td>";
-            echo "<td> $filas->CORREO</td>";
-            echo "<td> $filas->COMPAÑIA</td>";
-            echo "</tr>";	
+                echo "<tr>";
+	            echo "<td>$filas->ID</td>";
+                echo "<td> $filas->NOMBRE</td>";
+                echo "<td> $filas->CORREO</td>";
+                echo "<td> $filas->COMPAÑIA</td>";
+                echo "</tr>";	
             }?>
         </table>
         </div>

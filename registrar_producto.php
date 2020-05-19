@@ -12,16 +12,16 @@ $categoria=htmlentities(addslashes($_POST['categoria']));
 include ("conexion.php");
 $base=conectar();
     if(($codigo_de_barras != null) && ($nombre_producto != NULL) && ($descripcion != NULL) && ($precio != NULL) && ($precio_sujerido != NULL) && ($fecha != NULL) && ($existencia!= NULL) && ($marca!=NULL) && ($proveedor!=NULL) && ($categoria!=NULL)){    
-    $sql="INSERT INTO producto(CODIGO_DE_BARRAS , NOMBRE , DESCRIPCION , PRECIO_DE_COMPRA , PRECIO_SUGERIDO , FECHA_DE_COMPRA , CANTIDAD , MARCA , PROVEEDOR , categoria ) VALUES(:codigo , :nombre , :descripcion , :precio , :precio_sujerido , :fecha , :existencia , :marca , :proveedor , :categoria)";
-    $resul=$base->prepare($sql);
-    $resul->execute(array (":codigo"=>$codigo_de_barras,":nombre"=>$nombre_producto,":descripcion"=>$descripcion,":precio"=>$precio,":precio_sujerido"=>$precio_sujerido,":fecha"=>$fecha, ":existencia"=>$existencia,":marca"=>$marca,"proveedor"=>$proveedor,":categoria"=>$categoria));
-    $resul->closeCursor();
-    header("Location:productos.php");
+         $sql="INSERT INTO producto(CODIGO_DE_BARRAS , NOMBRE , DESCRIPCION , PRECIO_DE_COMPRA , PRECIO_SUGERIDO , FECHA_DE_COMPRA , CANTIDAD , MARCA , PROVEEDOR , categoria ) VALUES(:codigo , :nombre , :descripcion , :precio , :precio_sujerido , :fecha , :existencia , :marca , :proveedor , :categoria)";
+         $resul=$base->prepare($sql);
+         $resul->execute(array (":codigo"=>$codigo_de_barras,":nombre"=>$nombre_producto,":descripcion"=>$descripcion,":precio"=>$precio,":precio_sujerido"=>$precio_sujerido,":fecha"=>$fecha, ":existencia"=>$existencia,":marca"=>$marca,"proveedor"=>$proveedor,":categoria"=>$categoria));
+         $resul->closeCursor();
+         header("Location:productos.php");
     }
     else{
         echo'<script type="text/javascript">
-    alert("TODOS LOS CAMPOS SON ABLIGATORIOS");
-    window.location.href="productos.php";
-    </script>';
+        alert("TODOS LOS CAMPOS SON ABLIGATORIOS");
+        window.location.href="productos.php";
+        </script>';
     }
 ?>

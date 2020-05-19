@@ -1,5 +1,5 @@
 <?php
-function conectar(){
+    function conectar(){
         try{
             $base;
             $base=new PDO("mysql:host=localhost; dbname=papeleria" , "root" , "");
@@ -11,4 +11,4 @@ function conectar(){
             die ("error".$e->getMessage());
         }
     }
-    ?>
+?>

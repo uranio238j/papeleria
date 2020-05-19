@@ -7,14 +7,14 @@
     <title>Document</title>
 </head>
     <body>
-    <nav>
+        <nav>
             <form class="box" action="#" method="POST">
                 <input class="barra_b" type="text" name="busqueda" placeholder="Buscar">
                 <input class="button" type=image src="imagenes/lupa.png" width="25" height="25"> 
             </form>
-    </nav>
+        </nav>
     
-    <div class="m_lateral">
+        <div class="m_lateral">
                 <a class="logol" href="inicio.php"><img class="logo" src="imagenes/logo.png"></a> 
             <UL>
                   <li><a href=panel_de_control.php>panel de control</a></li>
@@ -25,7 +25,7 @@
                   <li>  <a href="#">Ventas</a></li>
                   <li>  <a href="serrar_secion.php">Cerrar secion</a></li>
             </UL>
-    </div>
+        </div>
         <?php
             // Conectando, seleccionando la base de datos
             $conexion = new mysqli('localhost', 'root', '', 'papeleria');
@@ -44,10 +44,10 @@
             </thead>
             <?php while($filas = $resultado->fetch_object()){
                 echo "<tr>";
-	        echo "<td>$filas->ID</td>";
-            echo "<td> $filas->NOMBRE_Y_APELLIDO</td>";
-            echo "<td> $filas->NOMBRE_DE_USUARIO</td>";
-            echo "</tr>";	
+	                echo "<td>$filas->ID</td>";
+                    echo "<td> $filas->NOMBRE_Y_APELLIDO</td>";
+                    echo "<td> $filas->NOMBRE_DE_USUARIO</td>";
+                echo "</tr>";	
             }?>
         </table>
         </div>

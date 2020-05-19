@@ -11,8 +11,8 @@ $base=conectar();
     }
     else{
         echo'<script type="text/javascript">
-    alert("No ingreso ni un dato");
-    window.location.href="categorias.php";
-    </script>';
+        alert("No ingreso ni un dato");
+        window.location.href="categorias.php";
+        </script>';
     }
 ?>

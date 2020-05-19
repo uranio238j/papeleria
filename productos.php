@@ -89,18 +89,18 @@
 		        </tr>
             </thead>
             <?php while($filas3 = $resultado3->fetch_object()){
-            echo "<tr>";
-            echo "<td>$filas3->CODIGO_DE_BARRAS</td>";
-            echo "<td> $filas3->NOMBRE</td>";
-            echo "<td> $filas3->DESCRIPCION</td>";
-            echo "<td> $filas3->PRECIO_DE_COMPRA</td>";
-            echo "<td> $filas3->PRECIO_SUGERIDO</td>";
-            echo "<td> $filas3->FECHA_DE_COMPRA</td>";
-            echo "<td> $filas3->CANTIDAD</td>";
-            echo "<td> $filas3->MARCA</td>";
-            echo "<td> $filas3->PROVEEDOR</td>";
-            echo "<td> $filas3->categoria</td>";
-            echo "</tr>";	
+                echo "<tr>";
+                echo "<td>$filas3->CODIGO_DE_BARRAS</td>";
+                echo "<td> $filas3->NOMBRE</td>";
+                echo "<td> $filas3->DESCRIPCION</td>";
+                echo "<td> $filas3->PRECIO_DE_COMPRA</td>";
+                echo "<td> $filas3->PRECIO_SUGERIDO</td>";
+                echo "<td> $filas3->FECHA_DE_COMPRA</td>";
+                echo "<td> $filas3->CANTIDAD</td>";
+                echo "<td> $filas3->MARCA</td>";
+                echo "<td> $filas3->PROVEEDOR</td>";
+                echo "<td> $filas3->categoria</td>";
+                echo "</tr>";	
             }?>
         </table>
         </div>

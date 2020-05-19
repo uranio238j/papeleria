@@ -40,14 +40,14 @@
             <input type="submit" value="REGISTRAR">
         </form>
     </div>
-    <?php
+        <?php
             // Conectando, seleccionando la base de datos
             $conexion = new mysqli('localhost', 'root', '', 'papeleria');
             $conexion->set_charset("utf8");
             // Realizar una consulta MySQL
             $resultado = $conexion->query("SELECT * FROM categorias");
         ?>
-        <div class="centrar_categoria">
+    <div class="centrar_categoria">
         <table>
 		  <thead>
 		        <tr>
@@ -56,12 +56,12 @@
 		        </tr>
             </thead>
             <?php while($filas = $resultado->fetch_object()){
-            echo "<tr>";
-	        echo "<td>$filas->ID</td>";
-            echo "<td> $filas->categoria</td>";
-            echo "</tr>";	
+                echo "<tr>";
+	            echo "<td>$filas->ID</td>";
+                echo "<td> $filas->categoria</td>";
+                echo "</tr>";	
             }?>
         </table>
-        </div>
+    </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
       header("Location:index.php");
   }
   include ("conexion.php");
-  $base=conectar();
+    $base=conectar();
     $consulta="SELECT * FROM usuarios_1";
     $consulta_2="SELECT * FROM categorias";
     $consulta_3="SELECT * FROM producto";

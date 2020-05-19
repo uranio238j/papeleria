@@ -20,8 +20,8 @@ $base=conectar();
     }
     else{
         echo'<script type="text/javascript">
-    alert("TODOS LOS CAMPOS SON ABLIGATORIOS");
-    window.location.href="proveedor.php";
-    </script>';
+        alert("TODOS LOS CAMPOS SON ABLIGATORIOS");
+        window.location.href="proveedor.php";
+        </script>';
     }
 ?>

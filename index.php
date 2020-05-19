@@ -9,11 +9,10 @@
 <body>
    <form class="box" action="login2.php" method="POST">
    <h1>INICIAR SESIÓN</h1>
-   <input type="text" name="Usuario" placeholder="Usuario" autocomplete="off">
-   <input type="password" name="Contraseña" placeholder="Contraseña">
-   <input type="submit" name="" value="INGRESAR">
-    <a href="registro.php">registarce</a>         
+        <input type="text" name="Usuario" placeholder="Usuario" autocomplete="off">
+        <input type="password" name="Contraseña" placeholder="Contraseña">
+        <input type="submit" name="" value="INGRESAR">
+         <a href="registro.php">registarce</a>         
    </form>
-
 </body>
 </html>
