@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
                   <li>  <a href="categorias.php">Categorias</a></li>
                   <li>  <a href="productos.php">Productos</a></li>
                   <li>  <a href="proveedor.php">Proveedores</a></li>
-                  <li>  <a href="#">Ventas</a></li>
+                  <li>  <a href="ventas.php">Ventas</a></li>
                   <li>  <a href="serrar_secion.php">Cerrar secion</a></li>
             </UL>
         </div>
