@@ -36,7 +36,7 @@
     <div class="agregar_c">
         <form class="box" action="registrar_categorias.php" method="POST">
             <h2>REGISTRAR CATEGORIA</h2>
-            <input type="text" name="Categoria" placeholder="Categoria">
+            <input type="text" name="Categoria" placeholder="Categoria" autocomplete="off">
             <input type="submit" value="REGISTRAR">
         </form>
     </div>
