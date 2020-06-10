@@ -35,19 +35,19 @@
             // Conectando, seleccionando la base de datos
             $conexion = new mysqli('localhost', 'root', '', 'papeleria');
             $conexion->set_charset("utf8");
-            // Realizar una consulta MySQL
+            // Realizar  consultas MySQL
             $resultado = $conexion->query("SELECT * FROM proveedor");
             $resultado2 = $conexion->query("SELECT * FROM categorias");
             $resultado3 = $conexion->query("SELECT * FROM producto");
             $resultado4 = $conexion->query("SELECT * FROM factura");
         ?>
     <div class="agregar_pr">
-            <form class="box" action="registrar_ventas.php" method="POST">
+            <form class="box" action="datos_factura.php" method="POST">
                 <h2>REGISTRAR VENTA</h2>
                 <input type="text" name="fecha" placeholder="Fecha de venta año-mes-dia">
                 <input type="text" name="nombre" placeholder="Nombre del producto">
                 <input type="text" name="Domicilio" placeholder="Domicilio">
-                <input type="text" name="RFC" placeholder="RFC del ciente">
+                <input type="text" name="RFC" placeholder="RFC">
                 <input type="text" name="Telefono" placeholder="Telefono">
                 <input type="text" name="Cantidad" placeholder="Cantidad de compra">
                 <input type="text" name="Descripcion" placeholder="Descripcion del producto">

@@ -1,15 +1,5 @@
 <?php
-$fecha=htmlentities(addslashes($_POST['fecha']));
-$nombre_producto=htmlentities(addslashes($_POST['nombre']));
-$Domicilio=htmlentities(addslashes($_POST['Domicilio']));
-$RFC=htmlentities(addslashes($_POST['RFC']));
-$Telefono=htmlentities(addslashes($_POST['Telefono']));
-$Cantidad=htmlentities(addslashes($_POST['Cantidad']));
-$Descripcion=htmlentities(addslashes($_POST['Descripcion']));
-$Precio_u=htmlentities(addslashes($_POST['Precio_u']));
-$Subtotal=htmlentities(addslashes($_POST['Subtotal']));
-$IVA_Total=htmlentities(addslashes($_POST['IVA_Total']));
-$Precio_Total=htmlentities(addslashes($_POST['Precio_total']));
+include ("datos_factura.php");
 include ("conexion.php");
 $base=conectar();
     if(($fecha != null) && ($nombre_producto != NULL) && ($Domicilio != NULL) && ($RFC != NULL) && ($Telefono != NULL) && ($Cantidad != NULL) && ($Descripcion != NULL) && ($Precio_u!= NULL) && ($Subtotal!=NULL) && ($IVA_Total!=NULL) && ($Precio_Total!=NULL)){    

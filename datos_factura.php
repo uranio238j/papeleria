@@ -1,0 +1,13 @@
+<?php
+    $fecha=htmlentities(addslashes($_POST['fecha']));
+    $nombre_producto=htmlentities(addslashes($_POST['nombre']));
+    $Domicilio=htmlentities(addslashes($_POST['Domicilio']));
+    $RFC=htmlentities(addslashes($_POST['RFC']));
+    $Telefono=htmlentities(addslashes($_POST['Telefono']));
+    $Cantidad=htmlentities(addslashes($_POST['Cantidad']));
+    $Descripcion=htmlentities(addslashes($_POST['Descripcion']));
+    $Precio_u=htmlentities(addslashes($_POST['Precio_u']));
+    $Subtotal=htmlentities(addslashes($_POST['Subtotal']));
+    $IVA_Total=htmlentities(addslashes($_POST['IVA_Total']));
+    $Precio_Total=htmlentities(addslashes($_POST['Precio_total']));
+?>
